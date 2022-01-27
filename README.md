@@ -102,5 +102,4 @@ Now the tests will be execute on your machine.
 
 We have used a dialer(phone) android application and excel test data in this template but you can change it accordingly.
 
-For a better understanding please refer to this blog:- https://blog.knoldus.com/wp-admin/post.php?post=118735&action=edit&calypsoify=1
-        
+For a better understanding please refer to this blog:- https://blog.knoldus.com/automate-android-app-in-appium-with-data-driven-framework/
