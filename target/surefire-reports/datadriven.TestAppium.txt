@@ -1,10 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: datadriven.TestAppium
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 16.652 sec <<< FAILURE!
-sampleTest(datadriven.TestAppium)  Time elapsed: 16.575 sec  <<< FAILURE!
-java.lang.AssertionError: Actual value is : (919) 494-4299 did not match with expected value: 9897654785
-	at datadriven.TestAppium.sampleTest(TestAppium.java:87)
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 17.641 sec <<< FAILURE!
+sampleTest(datadriven.TestAppium)  Time elapsed: 17.573 sec  <<< FAILURE!
+java.lang.AssertionError: Actual value is : (919) 494-4299 did not match with expected value:(919) 494-4299
+	at datadriven.TestAppium.sampleTest(TestAppium.java:65)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
