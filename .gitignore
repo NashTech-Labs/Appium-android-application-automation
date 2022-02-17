@@ -2,8 +2,9 @@
 *.iml
 *.iws
 target/
+.target
+target
 .target/
-*/target/**
 */target/*
 # Package Files #
 *.jar
