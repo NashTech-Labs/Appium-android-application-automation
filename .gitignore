@@ -1,6 +1,7 @@
 .idea/
 *.iml
 *.iws
+target/
 .target/
 */target/**
 */target/*
