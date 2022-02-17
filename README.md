@@ -51,8 +51,7 @@ Android Studio-
       </dependency> 
 # Steps for execution
 Clone the repository on your local system.
-Intellij will resolve all the required dependencies.
-Download Appium
+Intellij will resolve all the required dependencies and then Download Appium.
 
 1.To download the appium(terminal based):
 
@@ -69,7 +68,7 @@ Go to the terminal and execute following commands steps by steps:
  > node your-appium-test.js
 
 2.To download appium destop(GUI based):
-  click on gien link https://github.com/appium/appium-desktop/releases/latest
+  click on given link https://github.com/appium/appium-desktop/releases/latest
     
 After download appium start appium server.
 
