@@ -2,6 +2,7 @@ package datadriven;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import org.jboss.logging.BasicLogger;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,14 +10,19 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class TestPhoneDialer {
+    private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     ReadDataConfig excel = new ReadDataConfig("src/test/resources/datadriven.xlsx");  //external data source
     private AndroidDriver driver;  //global variable
+    private BasicLogger logger;
 
     @Before
     public void setUp() throws MalformedURLException {
-        System.out.println("now the shows begins");
+        // System.out.println("now the shows begins");
+        LOGGER.log(Level.INFO, "now the shows begins");
         //essential desired capabilities for setup the connection between appium server and emulator device
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setCapability("platformName", "Android");
@@ -38,7 +44,7 @@ public class TestPhoneDialer {
         pressOnRecent.click();
         MobileElement pressOnCall = (MobileElement) driver.findElementById("com.android.dialer:id/empty_list_view_action");
         pressOnCall.click();
-        //phone dialer trap element description
+        //phone dialer element description
         MobileElement press8 = (MobileElement) driver.findElementByAccessibilityId(excel.getData(0, 4, 1));
         press8.click();
         MobileElement press2 = (MobileElement) driver.findElementByAccessibilityId(excel.getData(0, 3, 1));
@@ -62,13 +68,13 @@ public class TestPhoneDialer {
         MobileElement locateAllElement = (MobileElement) driver.findElementById("com.android.dialer:id/digits");  //locate the edit box of the dialer by using getText()
         locateAllElement.getText();
         //Check the input value on the edit box and assert it
-        assert locateAllElement.getText().equals(excel.getData(0, 5, 0)) : "Actual value is : " + locateAllElement.getText() + " did not match with expected value";
-        System.out.println("Actual value match with expected value :" + locateAllElement.getText());
+        assert locateAllElement.getText().equals(excel.getData(0, 5, 0)) : "Actual value : " + locateAllElement.getText() + " did not match with expected value";
+        LOGGER.log(Level.INFO, " expected value is:" + locateAllElement.getText() + " and the Actual value is:" + excel.getData(0, 5, 0));
     }
 
     @After
     public void tearDown() {
-        System.out.println("test is completed");
+        LOGGER.log(Level.INFO, "test is completed");
         driver.quit();
     }
 }

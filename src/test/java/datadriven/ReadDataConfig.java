@@ -13,8 +13,8 @@ public class ReadDataConfig {
     public ReadDataConfig(String excelpath) {
         try {
             File src = new File(excelpath);
-            FileInputStream kekafile = new FileInputStream(src);
-            wb = new XSSFWorkbook(kekafile);
+            FileInputStream appiumfile = new FileInputStream(src);
+            wb = new XSSFWorkbook(appiumfile);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
