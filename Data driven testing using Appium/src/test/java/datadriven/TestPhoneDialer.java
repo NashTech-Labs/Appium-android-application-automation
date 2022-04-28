@@ -29,7 +29,7 @@ public class TestPhoneDialer {
         desiredCapabilities.setCapability("appium:platformVersion", "11.0");
         desiredCapabilities.setCapability("appium:deviceName", "4.7_WXGA_API_30");
         desiredCapabilities.setCapability("appium:automationName", "appium");
-        desiredCapabilities.setCapability("appium:noRest", true);
+        desiredCapabilities.setCapability("appium:noReset", true);
         desiredCapabilities.setCapability("appium:udid", "emulator-5554"); //special emulator id
         desiredCapabilities.setCapability("appPackage", "com.android.dialer");  //required desired capabilities to launch the particular application
         desiredCapabilities.setCapability("appActivity", "com.android.dialer.main.impl.MainActivity");
